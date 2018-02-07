@@ -215,11 +215,25 @@
 	position relative
 	z-index 1
 	.main
+		&:hover
+			.swiper-button-white
+				opacity 1
 		a
 			display block
 		img
 			display block
 			margin 0 auto
+		.swiper-pagination
+			bottom 60px
+			span
+				width 10px
+				height 10px
+				opacity 1
+				&.swiper-pagination-bullet-active
+					background #fff
+		.swiper-button-white
+			opacity 0
+			transition 0.3s
 .bg
 	position relative
 	z-index 1
@@ -398,6 +412,7 @@
 						text-align center
 						padding 25px 25px 40px
 	&.news
+		background-size auto 100%
 		.list-3
 			.swiper-container
 				margin 20px 0
@@ -460,7 +475,8 @@
 				height 20px
 				background linear-gradient(to right ,#fff 0%,#fff 100%) center center/50% 1px no-repeat,
 				#c1c1c1 linear-gradient(to top ,#fff 0%,#fff 100%) center center/1px 50% no-repeat
-					
+		.btn-wrap
+			padding-top 40px
 .video-service
 	border-bottom 1px solid #e5e5e5
 	.video

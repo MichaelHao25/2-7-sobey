@@ -1430,6 +1430,9 @@
 				<div class="swiper-slide"><a href="#"><img src="img/hico2.jpg" alt=""></a></div>
 				<div class="swiper-slide"><a href="#"><img src="img/hico2.jpg" alt=""></a></div>
 			</div>
+			<div class="swiper-pagination"></div>
+			<div class="swiper-button-prev swiper-button-white"></div>
+			<div class="swiper-button-next swiper-button-white"></div>
 		</div>
 		<div class="bg hidden-xs">
 			<div class="container">
@@ -1819,10 +1822,10 @@
 	var mySwiper = new Swiper ('.main.swiper-container', {
 		autoplay:3000,
 		loop:true,
-		speed:1000
-		// pagination: '.swiper-pagination',
-		// nextButton: '.swiper-button-next',
-		// prevButton: '.swiper-button-prev',
+		speed:1000,
+		pagination: '.main .swiper-pagination',
+		nextButton: '.main .swiper-button-next',
+		prevButton: '.main .swiper-button-prev',
 	})  
 	var mySwiper = new Swiper ('.sub-main.swiper-container', {
 		direction: 'vertical',
