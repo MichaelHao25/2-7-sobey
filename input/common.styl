@@ -311,6 +311,9 @@
 					position absolute
 					bottom 15px
 					right 15px
+					transition 0.3s
+					&:hover
+						color #1660e8
 	.btn-wrap
 		padding-bottom 40px
 	&.solve-way
@@ -366,6 +369,8 @@
 			.row
 				background linear-gradient(to bottom,transparent 10%, #d7d7d7 50%, transparent 90%) 33.33% center/2px 100% no-repeat,
 				linear-gradient(to bottom, transparent 10%, #d7d7d7 50%, transparent 90%) 66.66% center/2px 100% no-repeat
+				@media(max-width 991px)
+					background none
 			.item
 				max-width 239px
 				margin 0 auto 20px
@@ -392,6 +397,70 @@
 						line-height 1.5
 						text-align center
 						padding 25px 25px 40px
+	&.news
+		.list-3
+			.swiper-container
+				margin 20px 0
+				height 300px
+				// .swiper-slide
+				// 	padding 10px 0
+			.pic
+				img
+					display block
+					width 100%
+			.date
+				width 40px
+				line-height 40px
+				font-size 20px
+				text-align center
+				&.active
+					.day
+						color #fff
+						background #2778c9
+					.month
+						color #2778c9
+						background #fff
+				.day
+					height 40px
+					font-size 20px
+					color #fff
+					background #c1c1c1
+				.month
+					height 40px
+					font-size 20px
+					color #c1c1c1
+					background #fff
+			h3
+				padding 5px 0
+				font-size 18px
+				color #2a2a2a
+				line-height 1.5
+				@media(max-width 400px)
+					white-space nowrap
+					text-overflow ellipsis
+					overflow hidden
+			p
+				font-size 12px
+				color #a8a8a8
+				line-height 1.5	
+				@media(max-width 400px)
+					white-space nowrap
+					text-overflow ellipsis
+					overflow hidden
+			.tips
+				margin-top 10px
+				font-size 12px
+				color #fff
+				background #f00
+				padding 3px
+				border-radius 5px
+			.add
+				margin-top 10px
+				width 20px
+				height 20px
+				background linear-gradient(to right ,#fff 0%,#fff 100%) center center/50% 1px no-repeat,
+				#c1c1c1 linear-gradient(to top ,#fff 0%,#fff 100%) center center/1px 50% no-repeat
+					
 .video-service
 	border-bottom 1px solid #e5e5e5
 	.video
@@ -438,3 +507,64 @@
 		line-height 50px
 		text-align center
 		background #4276f9 url(../img/arrow-right.png) 90% center no-repeat
+
+
+.footer
+	.top
+		background url(../img/hico21.jpg) center top /auto 100% no-repeat
+		.brand-list
+			padding 20px 0 0
+			a
+			img
+				display block
+			img
+				width 106px
+				margin 20px auto
+		.menu
+			position relative
+			min-height 300px
+			background linear-gradient(to right,transparent 0%,#52546c 10%,#52546c 90%,transparent 100%) center top/100% 2px no-repeat
+			a
+				display block
+				margin-top 25px
+				text-align center
+				font-size 18px
+				color #fff
+				transition 0.3s
+				&:hover
+					color #1660e8
+			.qr-code
+				position absolute
+				bottom 90px
+				right 15px
+				@media(max-width 991px)
+					position static
+					text-align center
+				a
+					display inline-block
+				img
+					margin 0 20px
+	.bottom
+		background #21212b
+		font-size 16px
+		color #fff
+		line-height 46px
+		.fl
+		.fr
+			@media(max-width 991px)
+				width 100%
+		span
+			padding 0 10px
+			@media(max-width 991px)
+				display block
+				text-align center
+			a
+				padding 0 10px
+				transition 0.3s
+				&:hover
+					color #1660e8
+		.icon
+			background url(../img/hico4.jpg) 33.33% center no-repeat,
+			url(../img/hico4.jpg) 66.66% center no-repeat
+			@media(max-width 991px)
+				background none
