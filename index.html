@@ -1692,7 +1692,7 @@
 								<div class="swiper-slide" data-url = 'img/hico23.jpg'>
 									<div class="row">
 										<div class="col-xs-2 col-md-2 col-sm-1">
-											<div class="date active">
+											<div class="date">
 												<div class="day">
 													01
 												</div>
@@ -1710,7 +1710,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="swiper-slide" data-url = 'img/hico20.jpg'>
+								<div class="swiper-slide" data-url = 'img/hico20.png'>
 									<div class="row">
 										<div class="col-xs-2 col-md-2 col-sm-1">
 											<div class="date">
@@ -1819,7 +1819,7 @@
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/swiper-3.3.1.jquery.min.js"></script>
 <script>
-	var mySwiper = new Swiper ('.main.swiper-container', {
+	var mySwiper1 = new Swiper ('.main.swiper-container', {
 		autoplay:3000,
 		loop:true,
 		speed:1000,
@@ -1827,7 +1827,7 @@
 		nextButton: '.main .swiper-button-next',
 		prevButton: '.main .swiper-button-prev',
 	})  
-	var mySwiper = new Swiper ('.sub-main.swiper-container', {
+	var mySwiper2 = new Swiper ('.sub-main.swiper-container', {
 		direction: 'vertical',
 		autoplay:3000,
 		loop:true,
@@ -1837,7 +1837,7 @@
 		// prevButton: '.swiper-button-prev',
 	})   
 
-	var mySwiper = new Swiper ('.news.swiper-container', {
+	var mySwiper3 = new Swiper ('.news.swiper-container', {
 		direction: 'vertical',
 		autoplay:3000,
 		loop:true,
@@ -1852,7 +1852,17 @@
 		// prevButton: '.swiper-button-prev',
 	})   
 
-
+	$('.index-product.news .list-3 .swiper-container').hover(function() {
+		mySwiper3.stopAutoplay();
+	}, function() {
+		mySwiper3.startAutoplay();
+	}).on('click', '.swiper-slide', function() {
+		var url = $(this).attr('data-url');
+		console.log(url)
+		$('.index-product.news .list-3 .date').removeClass('active');
+		$(this).find('.date').addClass('active');
+		$('.index-product.news .list-3 .pic img').attr('src', url);
+	});;
 
 	// $('*[data-js-tabs]').children().on('click', function() {
 		$('*[data-js-tabs]').children('.arrow-right').on('click', function() {
